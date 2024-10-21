@@ -79,6 +79,38 @@
             transform: translateY(0);
         }
 
+        /* Стилі для галереї */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Копірайт */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -91,6 +123,7 @@
             <a href="#culture">Культура</a>
             <a href="#economy">Економіка</a>
             <a href="#tourism">Туризм</a>
+            <a href="#gallery">Галерея</a>
         </div>
 
         <section id="history" class="info-block section">
@@ -105,14 +138,29 @@
 
         <section id="economy" class="info-block section">
             <h2>Економіка</h2>
-            <p>Економіка села базується на сільському господарстві, зокрема на вирощуванні зернових культур і тваринництві. Останнім часом розвивається малий бізнес і зелене туризм.</p>
+            <p>Економіка села базується на сільському господарстві, зокрема на вирощуванні зернових культур і тваринництві. Останнім часом розвивається малий бізнес і зелений туризм.</p>
         </section>
 
         <section id="tourism" class="info-block section">
             <h2>Туризм</h2>
             <p>Дядьковичі приваблюють туристів завдяки своїм мальовничим краєвидам, річкам та можливостям для відпочинку на природі. Тут є умови для екологічного туризму та активного відпочинку.</p>
         </section>
+
+        <!-- Галерея -->
+        <section id="gallery" class="info-block section">
+            <h2>Галерея</h2>
+            <div class="gallery">
+                <img src="https://s1.hostingkartinok.com/uploads/images/2024/10/887815ce69fdd545f920e52747c9a56e.jpg" alt="Церква в селі">
+                <img src="https://s1.hostingkartinok.com/uploads/images/2024/10/85031979711dfeeb820fd2cf0be6da18.jpg" alt="Річка">
+            </div>
+        </section>
+
     </div>
+
+    <!-- Копірайт -->
+    <footer class="footer">
+        <p>&copy; 2024 Село Дядьковичі. Всі права захищені.</p>
+    </footer>
 
     <script>
         // Анімація при скролінгу
