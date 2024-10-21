@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Село Дядьковичі</title>
+    <style>
+        /* Основні стилі */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        /* Стилі для блоків інформації */
+        .info-block {
+            background-color: #ffffff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .info-block:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Плавна анімація між секціями */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Кнопки навігації */
+        .nav {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            padding: 10px 20px;
+            color: #007bff;
+            font-weight: bold;
+            border: 2px solid #007bff;
+            border-radius: 20px;
+            transition: background-color 0.3s, color 0.3s;
+            margin: 5px;
+        }
+
+        .nav a:hover {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        /* Анімація при перелистуванні */
+        .section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease;
+        }
+
+        .section-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Село Дядьковичі, Рівненська область</h1>
+        
+        <div class="nav">
+            <a href="#history">Історія</a>
+            <a href="#culture">Культура</a>
+            <a href="#economy">Економіка</a>
+            <a href="#tourism">Туризм</a>
+        </div>
+
+        <section id="history" class="info-block section">
+            <h2>Історія</h2>
+            <p>Село Дядьковичі має багату історію, яка сягає середньовіччя. Воно було відоме як один із центрів ремесел та торгівлі на півночі Рівненщини.</p>
+        </section>
+
+        <section id="culture" class="info-block section">
+            <h2>Культура</h2>
+            <p>Місцеві культурні традиції включають різноманітні народні свята, фестивалі та ремесла. Село відоме своїм фольклором та майстрами ручної роботи.</p>
+        </section>
+
+        <section id="economy" class="info-block section">
+            <h2>Економіка</h2>
+            <p>Економіка села базується на сільському господарстві, зокрема на вирощуванні зернових культур і тваринництві. Останнім часом розвивається малий бізнес і зелене туризм.</p>
+        </section>
+
+        <section id="tourism" class="info-block section">
+            <h2>Туризм</h2>
+            <p>Дядьковичі приваблюють туристів завдяки своїм мальовничим краєвидам, річкам та можливостям для відпочинку на природі. Тут є умови для екологічного туризму та активного відпочинку.</p>
+        </section>
+    </div>
+
+    <script>
+        // Анімація при скролінгу
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight - 100) {
+                    section.classList.add('section-visible');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
